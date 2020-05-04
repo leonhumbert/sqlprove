@@ -5,9 +5,8 @@
 --		  4. and view table populated
 
 -- Create 6 tables: 1) departments,
--- 2)employees, 3)department managers, 
--- 4)department employees, 5) salaries,
--- 6)titles
+-- 2) titles, 3)employees, 4)department managers, 
+-- 5)department employees, 6) salaries
 
 -- 1. Create a departments table
 
