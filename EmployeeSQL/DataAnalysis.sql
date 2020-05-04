@@ -41,7 +41,7 @@ SELECT
 	employees.last_name
 from departments
     INNER JOIN dept_manager ON dept_manager.dept_no = departments.dept_no
-	INNER JOIN employees ON employees.emp_no = dept_manager.emp_no
+	INNER JOIN employees ON employees.emp_no = dept_manager.emp_no;
 
 --4. List the department of each employee with the following information: employee number, last name, first name, and department name.  
 -- Join departments table with department employees table 
@@ -54,7 +54,7 @@ employees.first_name,
 departments.dept_name
 from employees 
     JOIN dept_emp ON dept_emp.emp_no = employees.emp_no
-    JOIN departments ON departments.dept_no = dept_emp.dept_no
+    JOIN departments ON departments.dept_no = dept_emp.dept_no;
 
 --5. List all employees whose first name is "Hercules" and last names begin with "B." 
 -- Self: Create table and export it as csv.
@@ -80,7 +80,7 @@ FROM employees
     JOIN dept_emp on dept_emp.emp_no = employees.emp_no
     JOIN departments on departments.dept_no = dept_emp.dept_no
 WHERE
-	departments.dept_name = 'Sales'
+	departments.dept_name = 'Sales';
 
 --7. List all employees in the Sales and Development departments, including their employee number, last name, 
 -- first name, and department name.  

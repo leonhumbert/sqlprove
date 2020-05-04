@@ -38,7 +38,8 @@ CREATE TABLE employees (
 	sex VARCHAR (10) ,
 	hire_date DATE NOT NULL
 );
-
+ALTER TABLE employees
+ADD FOREIGN KEY (emp_title_id) REFERENCES titles(title_id);
 --Import CSV
 --See table 
 SELECT * FROM employees
@@ -47,9 +48,11 @@ SELECT * FROM employees
 CREATE TABLE dept_manager (
     dept_no VARCHAR,
     emp_no INT,
-	FOREIGN KEY (dept_no) REFERENCES departments (dept_no) 
-	
+	FOREIGN KEY (dept_no) REFERENCES departments (dept_no)	
 );
+ALTER TABLE dept_manager
+ADD FOREIGN KEY (emp_no) REFERENCES employees(emp_no);
+
 --Import CSV
 --See Table
 SELECT * FROM dept_manager;
